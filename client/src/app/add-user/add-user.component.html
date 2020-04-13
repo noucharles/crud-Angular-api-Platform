@@ -1,0 +1,15 @@
+<div class="col-md-6 col-sm-3">
+  <h2 class="text-center">POST</h2>
+  <form #formulaire="ngForm">
+    <label for="firstname">Firstname</label>
+    <input required id="firstname" type="text" ngModel name="firstname" class="form-control">
+
+    <label for="lastname">Lastname</label>
+    <input required id="lastname" type="text" ngModel name="lastname" class="form-control">
+
+    <label for="matricule">Matricule</label>
+    <input required id="matricule" type="text" ngModel name="matricule" class="form-control">
+    <br>
+    <button [disabled]="formulaire.invalid" (click)="addUser(formulaire)" class="btn btn-primary">VALIDER</button>
+  </form>
+</div>
